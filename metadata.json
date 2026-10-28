@@ -1,0 +1,8 @@
+{
+  "name": "Remix Blinkchat",
+  "description": "Social communication app to chat, snap photos and videos with creative filters, connect with friends, and get AI assistance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Random anonymous matching queue
+    match /match_queue/{queueId} {
+      allow read, write: if true;
+    }
+
+    // Active real-time anonymous random chats
+    match /active_chats/{chatId} {
+      allow read, write: if true;
+
+      match /messages/{messageId} {
+        allow read, write: if true;
+      }
+    }
+
+    // Safety Reports collection
+    match /reports/{reportId} {
+      allow read, write: if true;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Posts collection
+    match /posts/{postId} {
+      allow read, write: if true;
+    }
+
+    // Comments collection
+    match /comments/{commentId} {
+      allow read, write: if true;
+    }
+
+    // Messages collection
+    match /messages/{messageId} {
+      allow read, write: if true;
+    }
+
+    // Friend Requests collection
+    match /friend_requests/{requestId} {
+      allow read, write: if true;
+    }
+  }
+}
